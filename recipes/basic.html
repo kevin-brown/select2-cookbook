@@ -1,0 +1,106 @@
+---
+title: Basic
+layout: recipe
+breadcrumb: Basic examples
+---
+<div class="row">
+    <div class="col-lg-5">
+        <p>
+            Select2 can take a regular select box like this:
+        </p>
+
+        <p>
+            <select id="example_single" class="form-control input-block-level">
+                {% include states-data.html %}
+            </select>
+        </p>
+
+        <p>
+            And turn it into a customized select box:
+        </p>
+
+        <p>
+            <select id="basic_single" style="width: 100%">
+                {% include states-data.html %}
+            </select>
+        </p>
+
+        <p>
+            This allows you to quickly add a search box that will allow you to
+            filter the options.
+        </p>
+    </div>
+    <div class="col-lg-7">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                HTML
+            </div>
+            <div class="panel-body">
+<pre class="prettyprint linenums escape" id="single_html">
+<select id="basic_single">
+    <!-- options omitted -->
+</select>
+</pre>
+            </div>
+        </div>
+
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                JavaScript
+            </div>
+            <div class="panel-body">
+                <pre class="prettyprint linenums" id="single_js"></pre>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-5">
+        <p>
+            Select2 also supports multi-value select boxes:
+        </p>
+
+        <select id="basic_multi" multiple="multiple" style="width: 100%">
+            {% include states-data.html %}
+        </select>
+
+        <p></p>
+
+        <p>
+            As long as the select box has the <code>multiple</code> attribute
+            set, Select2 will automatically pick this up.
+        </p>
+    </div>
+    <div class="col-lg-7">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                HTML
+            </div>
+            <div class="panel-body">
+<pre class="prettyprint linenums escape" id="multi_html">
+<select id="basic_multi" multiple="multiple">
+    <!-- options omitted -->
+</select>
+</pre>
+            </div>
+        </div>
+
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                JavaScript
+            </div>
+            <div class="panel-body">
+                <pre class="prettyprint linenums" id="multi_js"></pre>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" data-copy-to="#single_js">
+$("#basic_single").select2();
+</script>
+
+<script type="text/javascript" data-copy-to="#multi_js">
+$("#basic_multi").select2();
+</script>

@@ -13,10 +13,10 @@ layout: main
         <p>
             <a href="" class="btn btn-default">
                 <i class="fa fa-github"></i>
-                GitHub
+                Code on GitHub
             </a>
             <a href="http://ivaynberg.github.io/select2/" class="btn btn-primary">
-                Select2
+                Select2 Website
             </a>
         </p>
     </div>
@@ -26,13 +26,13 @@ layout: main
         <div class="col-lg-3">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    {{ recipe.title }}
-                </div>
-                <div class="panel-body">
-                    <a href="{{ recipe.url }}" class="btn btn-primary pull-right">
+                    <a href="{{ recipe.url }}" class="btn btn-primary btn-xs pull-right">
                         View
                     </a>
 
+                    {{ recipe.title }}
+                </div>
+                <div class="panel-body">
                     {{ recipe.description }}
                 </div>
             </div>

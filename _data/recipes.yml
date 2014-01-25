@@ -1,5 +1,6 @@
 - title: Basic
-  description: Basic select with a searchbox.
+  description: Basic select with a search box.
+  url: recipes/basic
 
 - title: Placeholders
   description: Show a placeholder when no option is selected.
