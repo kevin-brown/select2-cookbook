@@ -1,0 +1,47 @@
+- title: Basic
+  description: Basic select with a searchbox.
+
+- title: Placeholders
+  description: Show a placeholder when no option is selected.
+
+- title: Minimum input length
+  description: Do not start searching a data set when the search string is under a certain length.
+
+- title: Maximum input length
+  description: Do not allow a data set to be searched if the search string is greater than a certain length.
+
+- title: Templating results
+  description: Give a custom format to the results.
+
+- title: Templating selections
+  description: Give a custom format to results when they are selected.
+
+- title: Array data
+  description: Load the data set from a local array.
+
+- title: Limit selection size
+  description: Limit the number of selections that can be made.
+
+- title: Remote data
+  description: Load the data set from a remote data source.
+
+- title: Infinite scroll
+  description: Lazy-load data from a remote data source.
+
+- title: Tagging
+  description: Tagging allows users to create their own tags, or choose from a pre-defined list of tags.
+
+- title: Tokenization
+  description: Allow choices to be automatically added as the user is typing into the search field after they press certain keys.
+
+- title: Drag and drop sorting
+  description: Allow choices to be sorted using the jQuery UI sortable plugin
+
+- title: Custom matcher for searching
+  description: Filter matches when searching using a custom function.
+
+- title: Sort displayed results
+  description: Sort results using a custom sorting function.
+
+- title: Duplicating tags
+  description: Allow for the same result to be selected multiple times.
