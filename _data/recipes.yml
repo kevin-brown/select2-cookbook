@@ -4,6 +4,7 @@
 
 - title: Placeholders
   description: Show a placeholder when no option is selected.
+  url: recipes/placeholders
 
 - title: Minimum input length
   description: Do not start searching a data set when the search string is under a certain length.

@@ -1,34 +1,47 @@
 ---
-title: Basic
+title: Placeholders
 layout: recipe
-breadcrumb: Basic examples
+breadcrumb: Using placeholders
 ---
 <div class="row">
     <div class="col-lg-5">
         <p>
-            Select2 can take a regular select box like this:
+            Sometimes a placeholder needs to be visible before an actual
+            selection is made.
         </p>
 
         <p>
-            <select id="example_single" class="form-control input-block-level">
+            <select id="single_placeholder" style="width: 100%">
+                <option></option>
                 {% include states-data.html %}
             </select>
         </p>
 
         <p>
-            And turn it into a customized select box:
+            The placeholder can be declared using a <code>placeholder</code>
+            property when configuring the Select2.  This can also be declared
+            through the <code>data-placeholder</code> attribute when attached
+            to a <code>select</code> tag.
         </p>
 
         <p>
-            <select id="basic_single" style="width: 100%">
+            <select id="single_placeholder_clearable" style="width: 100%">
+                <option></option>
                 {% include states-data.html %}
             </select>
         </p>
 
         <p>
-            This allows you to quickly add a search box that will allow you to
-            filter the options.
+            The placeholder can be reset after a selection is made by setting
+            the <code>allowClear</code> flag when initializing Select2.
         </p>
+
+        <div class="alert alert-danger">
+            <strong>Watch out!</strong>
+            In order to use a placeholder with a single-value select box, you
+            must include a blank <code>&lt;option&gt;&lt;/option&gt;</code> tag
+            as the first option.
+        </div>
     </div>
     <div class="col-lg-7">
         <div class="panel panel-default">
@@ -37,7 +50,13 @@ breadcrumb: Basic examples
             </div>
             <div class="panel-body">
 <pre class="prettyprint linenums escape" id="single_html">
-<select id="basic_single">
+<select id="single_placeholder">
+    <option></option>
+    <!-- options omitted -->
+</select>
+
+<select id="single_placeholder_clearable">
+    <option></option>
     <!-- options omitted -->
 </select>
 </pre>
@@ -62,7 +81,8 @@ breadcrumb: Basic examples
         </p>
 
         <p>
-            <select id="basic_multi" multiple="multiple" style="width: 100%">
+            <select id="multi_placeholder" multiple="multiple" style="width: 100%">
+                <option></option>
                 {% include states-data.html %}
             </select>
         </p>
@@ -71,6 +91,11 @@ breadcrumb: Basic examples
             As long as the select box has the <code>multiple</code> attribute
             set, Select2 will automatically pick this up.
         </p>
+
+        <div class="alert alert-info">
+            Placeholders will be reset on multi value select boxes by default
+            when no options are selected.
+        </div>
     </div>
     <div class="col-lg-7">
         <div class="panel panel-default">
@@ -79,7 +104,8 @@ breadcrumb: Basic examples
             </div>
             <div class="panel-body">
 <pre class="prettyprint linenums escape" id="multi_html">
-<select id="basic_multi" multiple="multiple">
+<select id="multi_placeholder" multiple="multiple">
+    <option></option>
     <!-- options omitted -->
 </select>
 </pre>
@@ -98,9 +124,18 @@ breadcrumb: Basic examples
 </div>
 
 <script type="text/javascript" data-copy-to="#single_js">
-$("#basic_single").select2();
+$("#single_placeholder").select2({
+    placeholder: "Select a state"
+});
+
+$("#single_placeholder_clearable").select2({
+    placeholder: "Select a state",
+    allowClear: true
+});
 </script>
 
 <script type="text/javascript" data-copy-to="#multi_js">
-$("#basic_multi").select2();
+$("#multi_placeholder").select2({
+    placeholder: "Select a state"
+});
 </script>
