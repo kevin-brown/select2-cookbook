@@ -1,3 +1,4 @@
 exclude: ["jekyll.sh"]
 
 permalink: pretty
+baseurl: /select2-cookbook

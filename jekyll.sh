@@ -1,4 +1,4 @@
 #!/bin/bash
 
 rm -rf _site
-jekyll serve --watch --baseurl '/select2/' --safe --trace
+jekyll serve --watch --baseurl '' --safe --trace
